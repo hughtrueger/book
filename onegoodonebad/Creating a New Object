@@ -1,0 +1,23 @@
+<h1>Use {} Instead of New Object()</h1>
+
+There are multiple ways to create objects in JavaScript. Perhaps the more traditional method is to use the "new" constructor, like so:
+
+var o = new Object();
+o.name = 'Jeffrey';
+o.lastName = 'Way';
+o.someFunction = function() {
+   console.log(this.name);
+}
+
+However, this method receives the "bad practice" stamp without actually being so. Instead, I recommend that you use the much more robust object literal method.
+
+Better
+
+var o = {
+   name: 'Jeffrey',
+   lastName = 'Way',
+   someFunction : function() {
+      console.log(this.name);
+   }
+};
+Note that if you simply want to create an empty object, {} will do the trick.
